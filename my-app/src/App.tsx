@@ -4,7 +4,7 @@ import * as React from "react";
 import Button from './component/Button'
 import {Input} from './component/Input'
 import {RoducerButtons} from './component/ReducerButtons'
-import {GlobalContext, initialValues} from './component/GlobalState';
+import {GlobalContext, initialValues, GlobalProvider} from './component/GlobalState';
 
 
 
@@ -13,7 +13,7 @@ import {GlobalContext, initialValues} from './component/GlobalState';
 const App: React.FC=()=>{
 
   return (
-    <GlobalContext.Provider value={initialValues}>
+    <GlobalProvider>
     <div className="App">
       <div>123123</div>
 
@@ -25,7 +25,7 @@ const App: React.FC=()=>{
         <RoducerButtons/>
         <Input/>
     </div>
-    </GlobalContext.Provider>
+    </GlobalProvider>
   );
 }
 
